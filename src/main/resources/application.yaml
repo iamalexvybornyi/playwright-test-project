@@ -1,0 +1,11 @@
+app:
+  browser:
+    name: firefox
+    resolution:
+      width: 1920
+      height: 1080
+    maximized: true
+    headless: false
+spring:
+  profiles:
+    active: prod
