@@ -12,15 +12,15 @@ import org.springframework.stereotype.Service;
 public class LoginAction {
 
     @NonNull
-    private final ThreadLocal<Driver> driver;
+    private final Driver driver;
     @NonNull
     private final LoginPage loginPage;
 
     public void signUp(Account account) {
-        this.driver.get().getLocator(this.loginPage.getDisplayNameInput()).type(account.getDisplayName());
-        this.driver.get().getLocator(this.loginPage.getEmailInput()).type(account.getEmail());
-        this.driver.get().getLocator(this.loginPage.getPasswordInput()).type(account.getPassword());
-        this.driver.get().getLocator(this.loginPage.getConfirmPasswordInput()).type(account.getPassword());
-        this.driver.get().getLocator(this.loginPage.getSignUpButton()).click();
+        this.driver.getLocator(this.loginPage.getDisplayNameInput()).type(account.getDisplayName());
+        this.driver.getLocator(this.loginPage.getEmailInput()).type(account.getEmail());
+        this.driver.getLocator(this.loginPage.getPasswordInput()).type(account.getPassword());
+        this.driver.getLocator(this.loginPage.getConfirmPasswordInput()).type(account.getPassword());
+        this.driver.getLocator(this.loginPage.getSignUpButton()).click();
     }
 }

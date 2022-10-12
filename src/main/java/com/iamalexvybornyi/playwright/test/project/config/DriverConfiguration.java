@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Scope;
 
 @AllArgsConstructor
 @SpringBootConfiguration
@@ -19,7 +20,8 @@ public class DriverConfiguration {
     private final DriverFactory driverFactory;
 
     @Bean
-    public ThreadLocal<Driver> driver() {
-        return ThreadLocal.withInitial(driverFactory::create);
+    @Scope("thread")
+    public Driver driver() {
+        return driverFactory.create();
     }
 }

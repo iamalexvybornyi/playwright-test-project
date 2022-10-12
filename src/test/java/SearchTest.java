@@ -12,13 +12,13 @@ public class SearchTest extends BaseTest {
 
     @Test
     public void loginWithExistingAccount21() {
-        this.driver.get().getLocator(homePage.getSignInLink()).click();
-        this.driver.get().getLocator(loginPage.getAlreadyHaveAnAccountHeader()).click();
+        this.driver.getLocator(homePage.getSignInLink()).click();
+        this.driver.getLocator(loginPage.getAlreadyHaveAnAccountHeader()).click();
     }
 
     @Test
     public void loginWithExistingAccount22() {
-        this.driver.get().getLocator(homePage.getSignInLink()).click();
-        this.driver.get().getLocator(loginPage.getAlreadyHaveAnAccountHeader()).click();
+        this.driver.getLocator(homePage.getSignInLink()).click();
+        this.driver.getLocator(loginPage.getAlreadyHaveAnAccountHeader()).click();
     }
 }

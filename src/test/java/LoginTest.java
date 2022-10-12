@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
 
     @BeforeEach
     void goToAuthPage() {
-        driver.get().getPage().get().navigate(urlConfiguration.getAuth());
+        driver.getPage().get().navigate(urlConfiguration.getAuth());
     }
 
     @Test
@@ -35,7 +35,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginWithExistingAccount() {
-        this.driver.get().getLocator(homePage.getSignInLink()).click();
-        this.driver.get().getLocator(loginPage.getAlreadyHaveAnAccountHeader()).click();
+        this.driver.getLocator(homePage.getSignInLink()).click();
+        this.driver.getLocator(loginPage.getAlreadyHaveAnAccountHeader()).click();
     }
 }

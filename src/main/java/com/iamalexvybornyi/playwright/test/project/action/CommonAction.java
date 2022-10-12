@@ -13,13 +13,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CommonAction {
 
     @NonNull
-    private final ThreadLocal<Driver> driver;
+    private final Driver driver;
     @NonNull
     private final HomePage homePage;
 
     public void verifySignOutLinkIsDisplayed() {
-        this.driver.get().getLocator(this.homePage.getSignOutLink()).waitFor();
-        boolean signOutLinkIsVisible = this.driver.get().getLocator(this.homePage.getSignOutLink()).isVisible();
+        this.driver.getLocator(this.homePage.getSignOutLink()).waitFor();
+        boolean signOutLinkIsVisible = this.driver.getLocator(this.homePage.getSignOutLink()).isVisible();
         assertThat(signOutLinkIsVisible).isTrue();
     }
 }
