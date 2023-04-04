@@ -7,7 +7,6 @@ public class FirefoxDriver extends Driver {
 
     public FirefoxDriver(@NonNull BrowserConfigurationProvider browserConfigurationProvider) {
         super(browserConfigurationProvider);
-        this.browser = ThreadLocal.withInitial(() ->
-                this.playwright.get().firefox().launch(browserConfigurationProvider.getLaunchOptions()));
+        this.browser = this.playwright.firefox().launch(browserConfigurationProvider.getLaunchOptions());
     }
 }

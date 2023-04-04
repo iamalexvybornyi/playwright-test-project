@@ -18,4 +18,6 @@ public class UrlConfiguration {
     private String home;
     @NonNull
     private String auth;
+    @NonNull
+    private String shop;
 }

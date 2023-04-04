@@ -1,6 +1,6 @@
 app:
   browser:
-    name: firefox
+    name: chrome
     resolution:
       width: 1920
       height: 1080

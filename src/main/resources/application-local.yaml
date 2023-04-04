@@ -1,4 +1,5 @@
 app:
   url:
-    home: https://heartfelt-speculoos-05a6fa.netlify.app
-    auth: https://heartfelt-speculoos-05a6fa.netlify.app/auth
+    home: http://localhost:3000
+    auth: http://localhost:3000/auth
+    shop: http://localhost:3000/shop

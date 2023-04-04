@@ -19,7 +19,7 @@ public abstract class BrowserConfigurationProvider {
     public BrowserConfigurationProvider(@NonNull BrowserConfigurationProperties browserConfigurationProperties) {
         this.browserConfigurationProperties = browserConfigurationProperties;
         this.launchOptions = new BrowserType.LaunchOptions()
-                .setArgs(Arrays.asList(browserConfigurationProperties.getMaximized() ? "--start-maximized" : ""))
+                .setArgs(Arrays.asList(browserConfigurationProperties.getMaximized() ? "--start-fullscreen" : ""))
                 .setHeadless(browserConfigurationProperties.getHeadless());
     }
 }
