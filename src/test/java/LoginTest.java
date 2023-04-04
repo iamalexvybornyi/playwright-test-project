@@ -3,6 +3,7 @@ import com.iamalexvybornyi.playwright.test.project.action.LoginAction;
 import com.iamalexvybornyi.playwright.test.project.model.Account;
 import lombok.NonNull;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -21,7 +22,7 @@ public class LoginTest extends BaseTest {
         navigationAction.navigateToUrl(urlConfiguration.getAuth(), urlConfiguration.getAuth());
     }
 
-//    @Test
+    @Test
     public void signUpWithNewAccount() {
         final Account account = testDataGenerator.generateAccount();
         this.loginAction.signUp(account);

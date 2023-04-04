@@ -14,22 +14,22 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Service
 public class CommonAction {
     @NonNull
-    private final Driver driver;
+    private final ThreadLocal<Driver> driver;
     @NonNull
     private final HomePage homePage;
     @NonNull
     protected UrlConfiguration urlConfiguration;
 
     public void verifySignOutLinkIsDisplayed() {
-        this.driver.getLocator(this.homePage.getHeaderElement().getSignOutLink()).waitFor();
-        boolean signOutLinkIsVisible = this.driver.getLocator(this.homePage.getHeaderElement().getSignOutLink())
+        this.driver.get().getLocator(this.homePage.getHeaderElement().getSignOutLink()).waitFor();
+        boolean signOutLinkIsVisible = this.driver.get().getLocator(this.homePage.getHeaderElement().getSignOutLink())
                 .isVisible();
         assertThat(signOutLinkIsVisible).isTrue();
     }
 
     public void navigateToCategoryFromHomePage(@NonNull Category category) {
-        this.driver.getLocator(homePage.getHomeCategoryElement().getCategory(category)).click();
-        assertThat(driver.getPage().url())
+        this.driver.get().getLocator(homePage.getHomeCategoryElement().getCategory(category)).click();
+        assertThat(driver.get().getPage().get().url())
                 .isEqualTo(urlConfiguration.getShop() + "/" + category.toString().toLowerCase());
     }
 }

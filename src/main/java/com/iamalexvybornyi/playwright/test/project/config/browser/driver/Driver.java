@@ -4,40 +4,42 @@ import com.iamalexvybornyi.playwright.test.project.config.browser.provider.Brows
 import com.microsoft.playwright.*;
 import lombok.Getter;
 import lombok.NonNull;
+import org.springframework.stereotype.Component;
 
+@Component
 @Getter
 public abstract class Driver {
     @NonNull
     private final BrowserConfigurationProvider browserConfigurationProvider;
     @NonNull
-    protected final Playwright playwright;
+    protected final ThreadLocal<Playwright> playwright;
     @NonNull
-    protected Browser browser;
+    protected ThreadLocal<Browser> browser;
     @NonNull
-    protected BrowserContext context;
+    protected ThreadLocal<BrowserContext> context;
     @NonNull
-    protected Page page;
+    protected ThreadLocal<Page> page;
 
     @NonNull
     public Driver(@NonNull BrowserConfigurationProvider browserConfigurationProvider) {
         this.browserConfigurationProvider = browserConfigurationProvider;
-        this.playwright = Playwright.create();
+        this.playwright = ThreadLocal.withInitial(Playwright::create);
     }
 
     public void start() {
-        this.context = this.browser.newContext(new Browser.NewContextOptions()
+        this.context = ThreadLocal.withInitial(() -> this.browser.get().newContext(new Browser.NewContextOptions()
                 .setViewportSize(
                         browserConfigurationProvider.getBrowserConfigurationProperties().getResolution().getWidth(),
                         browserConfigurationProvider.getBrowserConfigurationProperties().getResolution().getHeight()
-                ));
-        this.page = this.context.newPage();
+                )));
+        this.page = ThreadLocal.withInitial(() -> this.context.get().newPage());
     }
 
     public Locator getLocator(String locator) {
-        return this.page.locator(locator);
+        return this.page.get().locator(locator);
     }
 
     public Locator getLocator(String locator, Page.LocatorOptions locatorOptions) {
-        return this.page.locator(locator, locatorOptions);
+        return this.page.get().locator(locator, locatorOptions);
     }
 }

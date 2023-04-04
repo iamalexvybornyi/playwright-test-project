@@ -7,6 +7,7 @@ public class ChromeDriver extends Driver {
 
     public ChromeDriver(@NonNull BrowserConfigurationProvider browserConfigurationProvider) {
         super(browserConfigurationProvider);
-        this.browser = this.playwright.chromium().launch(browserConfigurationProvider.getLaunchOptions());
+        this.browser = ThreadLocal.withInitial(() ->
+                this.playwright.get().chromium().launch(browserConfigurationProvider.getLaunchOptions()));
     }
 }

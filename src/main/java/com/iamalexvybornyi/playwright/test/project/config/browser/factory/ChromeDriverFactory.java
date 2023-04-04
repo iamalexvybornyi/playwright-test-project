@@ -4,7 +4,6 @@ import com.iamalexvybornyi.playwright.test.project.config.browser.provider.Brows
 import com.iamalexvybornyi.playwright.test.project.config.browser.driver.ChromeDriver;
 import com.iamalexvybornyi.playwright.test.project.config.browser.driver.Driver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,7 +15,6 @@ public class ChromeDriverFactory extends DriverFactory {
     }
 
     @Override
-    @Bean
     public Driver create() {
         return new ChromeDriver(this.browserConfigurationProvider);
     }

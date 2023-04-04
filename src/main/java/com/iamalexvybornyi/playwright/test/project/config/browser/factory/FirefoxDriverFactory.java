@@ -4,7 +4,6 @@ import com.iamalexvybornyi.playwright.test.project.config.browser.provider.Brows
 import com.iamalexvybornyi.playwright.test.project.config.browser.driver.Driver;
 import com.iamalexvybornyi.playwright.test.project.config.browser.driver.FirefoxDriver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,7 +15,6 @@ public class FirefoxDriverFactory extends DriverFactory {
     }
 
     @Override
-    @Bean
     public Driver create() {
         return new FirefoxDriver(this.browserConfigurationProvider);
     }

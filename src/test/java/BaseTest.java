@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class BaseTest {
 
     @Autowired
-    protected Driver driver;
+    protected ThreadLocal<Driver> driver;
     @Autowired
     protected UrlConfiguration urlConfiguration;
     @Autowired
@@ -24,14 +24,17 @@ public class BaseTest {
 
     @BeforeEach
     void createContextAndPage() {
-        driver.start();
+        driver.get().start();
         navigationAction.navigateToUrl(urlConfiguration.getHome(), urlConfiguration.getHome());
     }
 
     @AfterEach
     void closeContext() {
-        driver.getPage().close();
-        driver.getContext().close();
+        driver.get().getPage().get().close();
+        driver.get().getBrowser().get().close();
+        driver.get().getContext().get().close();
+        driver.get().getPlaywright().get().close();
+        driver.remove();
     }
 
 }
