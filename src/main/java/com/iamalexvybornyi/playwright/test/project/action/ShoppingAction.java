@@ -13,23 +13,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Service
 public class ShoppingAction {
     @NonNull
-    private final ThreadLocal<Driver> driver;
+    private final Driver driver;
     @NonNull
     private final ShopPage shopPage;
 
     public void addProductFromCategoryToCart(@NonNull String productName, @NonNull Category category) {
-        this.driver.get().getLocator(shopPage.getProductNameElement().getProductName(productName)).hover();
-        this.driver.get().getLocator(shopPage.getAddToCartButtonOfProductFromCategory(productName, category)).click();
+        this.driver.getLocator(shopPage.getProductNameElement().getProductName(productName)).hover();
+        this.driver.getLocator(shopPage.getAddToCartButtonOfProductFromCategory(productName, category)).click();
     }
 
     public void openCartFromHeader() {
-        this.driver.get().getLocator(shopPage.getHeaderElement().getCartIcon()).click();
-        assertThat(this.driver.get().getLocator(shopPage.getHeaderElement().getCartPreviewElement().getGoToCheckoutButton())
+        this.driver.getLocator(shopPage.getHeaderElement().getCartIcon()).click();
+        assertThat(this.driver.getLocator(shopPage.getHeaderElement().getCartPreviewElement().getGoToCheckoutButton())
                 .isVisible()).isTrue();
     }
 
     public void verifyProductIsPresentInCartPreview(@NonNull String productName) {
-        assertThat(this.driver.get().getLocator(shopPage.getHeaderElement().getCartPreviewElement()
+        assertThat(this.driver.getLocator(shopPage.getHeaderElement().getCartPreviewElement()
                 .getProductFromCartPreview(productName)).isVisible()).isTrue();
     }
 }

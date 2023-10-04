@@ -13,19 +13,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Service
 public class NavigationAction {
     @NonNull
-    private final ThreadLocal<Driver> driver;
+    private final Driver driver;
     @NonNull
     private final HomePage homePage;
     @NonNull
     protected UrlConfiguration urlConfiguration;
 
     public void goToShopPage() {
-        this.driver.get().getLocator(homePage.getHeaderElement().getShopLink()).click();
-        assertThat(driver.get().getPage().get().url()).isEqualTo(urlConfiguration.getShop());
+        this.driver.getLocator(homePage.getHeaderElement().getShopLink()).click();
+        assertThat(driver.getPage().get().url()).isEqualTo(urlConfiguration.getShop());
     }
 
     public void navigateToUrl(@NonNull String urlToNavigateTo, @NonNull String expectedUrl) {
-        driver.get().getPage().get().navigate(urlToNavigateTo);
-        assertThat(driver.get().getPage().get().url()).startsWith(expectedUrl);
+        driver.getPage().get().navigate(urlToNavigateTo);
+        assertThat(driver.getPage().get().url()).startsWith(expectedUrl);
     }
 }

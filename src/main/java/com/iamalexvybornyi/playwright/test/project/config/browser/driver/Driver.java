@@ -4,42 +4,48 @@ import com.iamalexvybornyi.playwright.test.project.config.browser.provider.Brows
 import com.microsoft.playwright.*;
 import lombok.Getter;
 import lombok.NonNull;
-import org.springframework.stereotype.Component;
 
-@Component
 @Getter
 public abstract class Driver {
     @NonNull
     private final BrowserConfigurationProvider browserConfigurationProvider;
     @NonNull
-    protected final ThreadLocal<Playwright> playwright;
+    private final ThreadLocal<Playwright> playwright = new ThreadLocal<>();
     @NonNull
-    protected ThreadLocal<Browser> browser;
+    private final ThreadLocal<Browser> browser = new ThreadLocal<>();
     @NonNull
-    protected ThreadLocal<BrowserContext> context;
+    private final ThreadLocal<BrowserContext> context = new ThreadLocal<>();
     @NonNull
-    protected ThreadLocal<Page> page;
+    private final ThreadLocal<Page> page = new ThreadLocal<>();
 
     @NonNull
     public Driver(@NonNull BrowserConfigurationProvider browserConfigurationProvider) {
         this.browserConfigurationProvider = browserConfigurationProvider;
-        this.playwright = ThreadLocal.withInitial(Playwright::create);
     }
 
     public void start() {
-        this.context = ThreadLocal.withInitial(() -> this.browser.get().newContext(new Browser.NewContextOptions()
-                .setViewportSize(
-                        browserConfigurationProvider.getBrowserConfigurationProperties().getResolution().getWidth(),
-                        browserConfigurationProvider.getBrowserConfigurationProperties().getResolution().getHeight()
-                )));
-        this.page = ThreadLocal.withInitial(() -> this.context.get().newPage());
+        this.playwright.set(Playwright.create());
+        this.browser.set(getBrowserType(this.playwright.get()).launch(browserConfigurationProvider.getLaunchOptions()));
+        this.context.set(
+                this.browser.get().newContext(new Browser.NewContextOptions()
+                        .setViewportSize(
+                                browserConfigurationProvider.getBrowserConfigurationProperties().getResolution().getWidth(),
+                                browserConfigurationProvider.getBrowserConfigurationProperties().getResolution().getHeight()
+                        ))
+        );
+        this.page.set(this.context.get().newPage());
     }
 
-    public Locator getLocator(String locator) {
+    @NonNull
+    public Locator getLocator(@NonNull String locator) {
         return this.page.get().locator(locator);
     }
 
-    public Locator getLocator(String locator, Page.LocatorOptions locatorOptions) {
+    @NonNull
+    public Locator getLocator(@NonNull String locator, @NonNull Page.LocatorOptions locatorOptions) {
         return this.page.get().locator(locator, locatorOptions);
     }
+
+    @NonNull
+    protected abstract BrowserType getBrowserType(@NonNull Playwright playwright);
 }
