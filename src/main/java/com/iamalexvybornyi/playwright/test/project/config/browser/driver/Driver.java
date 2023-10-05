@@ -4,7 +4,9 @@ import com.iamalexvybornyi.playwright.test.project.config.browser.provider.Brows
 import com.microsoft.playwright.*;
 import lombok.Getter;
 import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Getter
 public abstract class Driver {
     @NonNull
@@ -24,26 +26,37 @@ public abstract class Driver {
     }
 
     public void start() {
-        this.playwright.set(Playwright.create());
-        this.browser.set(getBrowserType(this.playwright.get()).launch(browserConfigurationProvider.getLaunchOptions()));
-        this.context.set(
+        log.debug("Initializing Playwright");
+        this.getPlaywright().set(Playwright.create());
+        this.getBrowser().set(getBrowserType(this.playwright.get()).launch(browserConfigurationProvider.getLaunchOptions()));
+        this.getContext().set(
                 this.browser.get().newContext(new Browser.NewContextOptions()
                         .setViewportSize(
                                 browserConfigurationProvider.getBrowserConfigurationProperties().getResolution().getWidth(),
                                 browserConfigurationProvider.getBrowserConfigurationProperties().getResolution().getHeight()
                         ))
         );
-        this.page.set(this.context.get().newPage());
+        this.getPage().set(this.context.get().newPage());
+    }
+
+    public void quit() {
+        log.debug("Closing Playwright");
+        this.getPage().get().close();
+        this.getContext().get().close();
+        this.getBrowser().get().close();
+        this.getPlaywright().get().close();
     }
 
     @NonNull
-    public Locator getLocator(@NonNull String locator) {
-        return this.page.get().locator(locator);
+    public Locator getLocator(@NonNull String selector) {
+        log.debug("Getting locator using selector '{}'", selector);
+        return this.page.get().locator(selector);
     }
 
     @NonNull
-    public Locator getLocator(@NonNull String locator, @NonNull Page.LocatorOptions locatorOptions) {
-        return this.page.get().locator(locator, locatorOptions);
+    public Locator getLocator(@NonNull String selector, @NonNull Page.LocatorOptions locatorOptions) {
+        log.debug("Getting locator using selector '{}' and options {}", selector, locatorOptions);
+        return this.page.get().locator(selector, locatorOptions);
     }
 
     @NonNull

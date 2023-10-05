@@ -1,8 +1,11 @@
+package com.iamalexvybornyi.playwright.test.project;
+
 import com.iamalexvybornyi.playwright.test.project.action.CategoryAction;
 import com.iamalexvybornyi.playwright.test.project.action.CommonAction;
 import com.iamalexvybornyi.playwright.test.project.action.ShoppingAction;
 import com.iamalexvybornyi.playwright.test.project.util.Category;
 import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -10,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.stream.Stream;
 
+@Slf4j
 public class AddToCartTest extends BaseTest {
 
     @Autowired

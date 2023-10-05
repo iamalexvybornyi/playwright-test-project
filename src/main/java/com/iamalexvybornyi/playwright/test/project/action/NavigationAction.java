@@ -5,10 +5,12 @@ import com.iamalexvybornyi.playwright.test.project.config.browser.driver.Driver;
 import com.iamalexvybornyi.playwright.test.project.page.HomePage;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Slf4j
 @AllArgsConstructor
 @Service
 public class NavigationAction {
@@ -20,12 +22,16 @@ public class NavigationAction {
     protected UrlConfiguration urlConfiguration;
 
     public void goToShopPage() {
+        log.info("Navigating to the shop page");
         this.driver.getLocator(homePage.getHeaderElement().getShopLink()).click();
+        log.info("Verifying that the current URL matches the expected");
         assertThat(driver.getPage().get().url()).isEqualTo(urlConfiguration.getShop());
     }
 
     public void navigateToUrl(@NonNull String urlToNavigateTo, @NonNull String expectedUrl) {
+        log.info("Navigating to the URL '{}'", urlToNavigateTo);
         driver.getPage().get().navigate(urlToNavigateTo);
+        log.info("Verifying that the current URL matches the expected");
         assertThat(driver.getPage().get().url()).startsWith(expectedUrl);
     }
 }

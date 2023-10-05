@@ -1,7 +1,10 @@
+package com.iamalexvybornyi.playwright.test.project;
+
 import com.iamalexvybornyi.playwright.test.project.action.CommonAction;
 import com.iamalexvybornyi.playwright.test.project.action.LoginAction;
 import com.iamalexvybornyi.playwright.test.project.model.Account;
 import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.stream.Stream;
 
+@Slf4j
 public class LoginTest extends BaseTest {
     @Autowired
     private LoginAction loginAction;

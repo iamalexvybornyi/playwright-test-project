@@ -1,5 +1,9 @@
+package com.iamalexvybornyi.playwright.test.project;
+
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
+@Slf4j
 public class NavigationTest extends BaseTest {
 
     @Test

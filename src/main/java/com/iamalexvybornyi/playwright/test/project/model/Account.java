@@ -4,6 +4,7 @@ import lombok.*;
 
 @AllArgsConstructor
 @Getter
+@ToString
 public class Account {
 
     @NonNull
