@@ -3,6 +3,7 @@ package com.iamalexvybornyi.playwright.test.project.action;
 import com.iamalexvybornyi.playwright.test.project.config.browser.driver.Driver;
 import com.iamalexvybornyi.playwright.test.project.model.Account;
 import com.iamalexvybornyi.playwright.test.project.page.LoginPage;
+import io.qameta.allure.Step;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,7 @@ public class LoginAction {
     @NonNull
     private final LoginPage loginPage;
 
+    @Step("Sign up")
     public void signUp(@NonNull Account account) {
         log.info("Signing up user with the following details: {}", account);
         log.info("Filling in the required form fields");
@@ -29,6 +31,7 @@ public class LoginAction {
         this.driver.getLocator(this.loginPage.getSignUpButton()).click();
     }
 
+    @Step("Sign in")
     public void signIn(@NonNull Account account) {
         log.info("Signing in user with the following details: {}", account);
         log.info("Filling in the required form fields");
