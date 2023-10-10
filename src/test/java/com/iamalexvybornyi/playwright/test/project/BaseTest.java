@@ -29,8 +29,6 @@ public class BaseTest {
     protected TestDataGenerator testDataGenerator;
     @Autowired
     protected NavigationAction navigationAction;
-    // This is a JUnit5 object that is injected but JUnit so @Autowired is not used intentionally
-    private TestInfo testInfo;
 
     @BeforeEach
     protected void createContextAndPage(@NonNull TestInfo testInfo) {
