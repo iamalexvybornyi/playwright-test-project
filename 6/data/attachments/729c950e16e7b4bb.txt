@@ -1,0 +1,15 @@
+2023-10-10 16:54:09 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Initializing Playwright
+2023-10-10 16:54:13 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-10-10 16:54:16 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2023-10-10 16:54:16 INFO c.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-5] Navigating to the category SNEAKERS from home page
+2023-10-10 16:54:16 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//h2[text()='sneakers']'
+2023-10-10 16:54:16 INFO c.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2023-10-10 16:54:16 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-5] Adding product Adidas NMD to cart
+2023-10-10 16:54:16 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//span[text()='Adidas NMD']'
+2023-10-10 16:54:18 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//span[text()='Adidas NMD']/parent::div/..//button[text()='Add to cart']'
+2023-10-10 16:54:18 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-5] Opening cart from header
+2023-10-10 16:54:18 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//*[@class='shopping-icon']/..'
+2023-10-10 16:54:18 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-5] Checking the cart preview is open
+2023-10-10 16:54:18 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]'
+2023-10-10 16:54:18 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-5] Checking the product 'Adidas NMD' is present in the cart preview
+2023-10-10 16:54:18 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]/..//span[text()='Adidas NMD']'
