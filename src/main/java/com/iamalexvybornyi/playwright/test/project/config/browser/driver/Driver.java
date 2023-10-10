@@ -41,10 +41,18 @@ public abstract class Driver {
 
     public void quit() {
         log.debug("Closing Playwright");
-        this.getPage().get().close();
-        this.getContext().get().close();
-        this.getBrowser().get().close();
-        this.getPlaywright().get().close();
+        if (this.getPage().get() != null) {
+            this.getPage().get().close();
+        }
+        if (this.getContext().get() != null) {
+            this.getContext().get().close();
+        }
+        if (this.getBrowser().get() != null) {
+            this.getBrowser().get().close();
+        }
+        if (this.getPlaywright().get() != null) {
+            this.getPlaywright().get().close();
+        }
     }
 
     @NonNull

@@ -9,7 +9,3 @@ app:
 spring:
   profiles:
     active: prod
-logging:
-  level:
-    root: info
-    com.iamalexvybornyi.playwright.test.project: debug

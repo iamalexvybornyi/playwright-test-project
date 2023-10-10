@@ -21,7 +21,7 @@ public class CommonAction {
     @NonNull
     private final HomePage homePage;
     @NonNull
-    protected UrlConfiguration urlConfiguration;
+    private UrlConfiguration urlConfiguration;
 
     @Step("Verify sign out link is displayed")
     public void verifySignOutLinkIsDisplayed() {

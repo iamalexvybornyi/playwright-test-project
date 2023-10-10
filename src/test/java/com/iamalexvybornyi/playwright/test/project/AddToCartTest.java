@@ -23,7 +23,7 @@ public class AddToCartTest extends BaseTest {
     @Autowired
     private CategoryAction categoryAction;
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "addProductToCartFromShop_{0}_{1}")
     @MethodSource("provideCategoriesWithProducts")
     public void addProductToCartFromShop(@NonNull Category categoryName, @NonNull String productName) {
         navigationAction.goToShopPage();
@@ -32,7 +32,7 @@ public class AddToCartTest extends BaseTest {
         shoppingAction.verifyProductIsPresentInCartPreview(productName);
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "addProductToCartFromCategory_{0}_{1}")
     @MethodSource("provideCategoriesWithProducts")
     public void addProductToCartFromCategory(@NonNull Category categoryName, @NonNull String productName) {
         commonAction.navigateToCategoryFromHomePage(categoryName);

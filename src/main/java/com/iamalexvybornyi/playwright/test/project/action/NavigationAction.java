@@ -20,7 +20,7 @@ public class NavigationAction {
     @NonNull
     private final HomePage homePage;
     @NonNull
-    protected UrlConfiguration urlConfiguration;
+    private UrlConfiguration urlConfiguration;
 
     @Step("Go to shop page")
     public void goToShopPage() {

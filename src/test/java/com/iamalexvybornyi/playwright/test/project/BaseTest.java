@@ -5,10 +5,13 @@ import com.iamalexvybornyi.playwright.test.project.config.CommonConfiguration;
 import com.iamalexvybornyi.playwright.test.project.config.CustomTestWatcher;
 import com.iamalexvybornyi.playwright.test.project.config.UrlConfiguration;
 import com.iamalexvybornyi.playwright.test.project.config.browser.driver.Driver;
+import com.iamalexvybornyi.playwright.test.project.util.GlobalKeys;
 import com.iamalexvybornyi.playwright.test.project.util.TestDataGenerator;
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -26,9 +29,12 @@ public class BaseTest {
     protected TestDataGenerator testDataGenerator;
     @Autowired
     protected NavigationAction navigationAction;
+    // This is a JUnit5 object that is injected but JUnit so @Autowired is not used intentionally
+    private TestInfo testInfo;
 
     @BeforeEach
-    void createContextAndPage() {
+    protected void createContextAndPage(@NonNull TestInfo testInfo) {
+        MDC.put(GlobalKeys.TEST_ID.getKey(), testInfo.getDisplayName());
         driver.start();
         navigationAction.navigateToUrl(urlConfiguration.getHome(), urlConfiguration.getHome());
     }

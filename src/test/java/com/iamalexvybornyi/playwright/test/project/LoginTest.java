@@ -33,7 +33,7 @@ public class LoginTest extends BaseTest {
         this.commonAction.verifySignOutLinkIsDisplayed();
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "loginWithExistingAccount_{0}")
     @MethodSource("provideExistingAccounts")
     public void loginWithExistingAccount(@NonNull Account account) {
         this.loginAction.signIn(account);
