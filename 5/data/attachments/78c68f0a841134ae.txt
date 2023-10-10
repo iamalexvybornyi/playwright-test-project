@@ -1,0 +1,15 @@
+2023-10-10 16:48:31 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Initializing Playwright
+2023-10-10 16:48:49 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-10-10 16:48:53 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Verifying that the current URL matches the expected
+2023-10-10 16:48:54 INFO c.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-2] Navigating to the category HATS from home page
+2023-10-10 16:48:54 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//h2[text()='hats']'
+2023-10-10 16:48:56 INFO c.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-2] Verifying that the current URL matches the expected
+2023-10-10 16:48:56 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-2] Adding product Brown Brim to cart
+2023-10-10 16:48:56 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//span[text()='Brown Brim']'
+2023-10-10 16:48:57 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//span[text()='Brown Brim']/parent::div/..//button[text()='Add to cart']'
+2023-10-10 16:48:57 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-2] Opening cart from header
+2023-10-10 16:48:57 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//*[@class='shopping-icon']/..'
+2023-10-10 16:48:58 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-2] Checking the cart preview is open
+2023-10-10 16:48:58 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]'
+2023-10-10 16:48:58 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-2] Checking the product 'Brown Brim' is present in the cart preview
+2023-10-10 16:48:58 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]/..//span[text()='Brown Brim']'

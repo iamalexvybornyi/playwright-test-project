@@ -1,0 +1,14 @@
+2023-10-10 16:48:31 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Initializing Playwright
+2023-10-10 16:48:50 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-10-10 16:48:53 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2023-10-10 16:48:54 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app/auth'
+2023-10-10 16:48:56 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2023-10-10 16:48:56 INFO c.i.p.t.p.a.LoginAction [ForkJoinPool-1-worker-5] Signing in user with the following details: Account(displayName=Test, email=test+1@mail.com, password=TestPassword)
+2023-10-10 16:48:56 INFO c.i.p.t.p.a.LoginAction [ForkJoinPool-1-worker-5] Filling in the required form fields
+2023-10-10 16:48:56 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//div[./span[contains(text(), 'Sign in with your email and password')]]//input[@name='email']'
+2023-10-10 16:48:56 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//div[./span[contains(text(), 'Sign in with your email and password')]]//input[@name='password']'
+2023-10-10 16:48:57 INFO c.i.p.t.p.a.LoginAction [ForkJoinPool-1-worker-5] Clicking the sign in button
+2023-10-10 16:48:57 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//button[@type='submit' and contains(text(), 'Sign In')]'
+2023-10-10 16:48:58 INFO c.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-5] Verifying the sign out link is displayed
+2023-10-10 16:48:58 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//span[contains(text(), 'SIGN OUT')]'
+2023-10-10 16:48:59 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//span[contains(text(), 'SIGN OUT')]'
