@@ -1,11 +1,13 @@
 package com.iamalexvybornyi.playwright.test.project.page;
 
-import com.iamalexvybornyi.playwright.test.project.page.element.HeaderElement;
+import com.iamalexvybornyi.playwright.test.project.annotation.PageElement;
+import com.iamalexvybornyi.playwright.test.project.page.element.common.HeaderElement;
 import lombok.Getter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Getter
 public abstract class BasePage {
-    @Autowired
+
+    @PageElement(selector = "//div[@id='root']/div[1]")
     protected HeaderElement headerElement;
+
 }

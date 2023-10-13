@@ -1,26 +1,26 @@
-package com.iamalexvybornyi.playwright.test.project.page;
+package com.iamalexvybornyi.playwright.test.project.page.element.shop;
 
 import com.iamalexvybornyi.playwright.test.project.annotation.PageElement;
 import com.iamalexvybornyi.playwright.test.project.annotation.PageElements;
-import com.iamalexvybornyi.playwright.test.project.page.core.Page;
+import com.iamalexvybornyi.playwright.test.project.page.core.AbstractPageElement;
+import com.iamalexvybornyi.playwright.test.project.page.core.Element;
 import com.iamalexvybornyi.playwright.test.project.page.core.PageElementCollection;
-import com.iamalexvybornyi.playwright.test.project.page.element.common.HeaderElement;
 import com.iamalexvybornyi.playwright.test.project.page.element.common.ProductCardElement;
+import com.microsoft.playwright.Locator;
 import lombok.Getter;
 import lombok.NonNull;
-import org.springframework.stereotype.Component;
 
-import java.util.List;
-
-@Component
 @Getter
-public class CategoryPage implements Page {
+public class ShopCategoryElement extends AbstractPageElement implements Element {
 
-    @PageElement(selector = "//div[@id='root']/div[1]")
-    protected HeaderElement headerElement;
-
+    @PageElement(selector = "//h2")
+    private Locator categoryHeader;
     @PageElements(selector = "//button[text()='Add to cart']/..", elementClass = ProductCardElement.class)
     private PageElementCollection<ProductCardElement> productCardElements;
+
+    public ShopCategoryElement(Locator locator) {
+        super(locator);
+    }
 
     @NonNull
     public ProductCardElement getProductCardElementByName(@NonNull String productName) {

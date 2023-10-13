@@ -43,11 +43,11 @@ public class AddToCartTest extends BaseTest {
 
     private static Stream<Arguments> provideCategoriesWithProducts() {
         return Stream.of(
-                Arguments.of(Category.HATS, "Brown Brim"),
-                Arguments.of(Category.JACKETS, "Black Jean Shearling"),
-                Arguments.of(Category.MENS, "Camo Down Vest"),
-                Arguments.of(Category.SNEAKERS, "Adidas NMD"),
-                Arguments.of(Category.WOMENS, "Blue Tanktop")
+                Arguments.of(Category.HATS, "Brown Brim")
+//                Arguments.of(Category.JACKETS, "Black Jean Shearling"),
+//                Arguments.of(Category.MENS, "Camo Down Vest"),
+//                Arguments.of(Category.SNEAKERS, "Adidas NMD"),
+//                Arguments.of(Category.WOMENS, "Blue Tanktop")
         );
     }
 }

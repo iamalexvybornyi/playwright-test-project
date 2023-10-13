@@ -2,6 +2,8 @@ package com.iamalexvybornyi.playwright.test.project.action;
 
 import com.iamalexvybornyi.playwright.test.project.config.browser.driver.Driver;
 import com.iamalexvybornyi.playwright.test.project.page.ShopPage;
+import com.iamalexvybornyi.playwright.test.project.page.core.PageElementCollection;
+import com.iamalexvybornyi.playwright.test.project.page.element.shop.ShopCategoryElement;
 import com.iamalexvybornyi.playwright.test.project.util.Category;
 import io.qameta.allure.Step;
 import lombok.AllArgsConstructor;
@@ -23,23 +25,25 @@ public class ShoppingAction {
     @Step("Add product from category to cart")
     public void addProductFromCategoryToCart(@NonNull String productName, @NonNull Category category) {
         log.info("Adding product '{}' from category '{}' to cart", productName, category);
-        this.driver.getLocator(shopPage.getProductNameElement().getProductName(productName)).hover();
-        this.driver.getLocator(shopPage.getAddToCartButtonOfProductFromCategory(productName, category)).click();
+        PageElementCollection<ShopCategoryElement> shopCategoryElements = shopPage.getShopCategoryElements();
+        log.info("Number of elements in the collection is {}", shopCategoryElements.stream().count());
+        log.info("Number of elements in the collection is {}", shopCategoryElements.stream().count());
+        shopPage.getShopCategoryElementFromName(category).getProductCardElementByName(productName).getLocator().hover();
+        shopPage.getAddToCartButtonOfProductFromCategory(productName, category).click();
     }
 
     @Step("Open cart from header")
     public void openCartFromHeader() {
         log.info("Opening cart from header");
-        this.driver.getLocator(shopPage.getHeaderElement().getCartIcon()).click();
+        shopPage.getHeaderElement().getCartIcon().click();
         log.info("Verifying that the checkout button is displayed");
-        assertThat(this.driver.getLocator(shopPage.getHeaderElement().getCartPreviewElement().getGoToCheckoutButton())
-                .isVisible()).isTrue();
+        assertThat(shopPage.getHeaderElement().getCartPreviewElement().getGoToCheckoutButton().isVisible()).isTrue();
     }
 
     @Step("Verify product is present in cart preview")
     public void verifyProductIsPresentInCartPreview(@NonNull String productName) {
         log.info("Verifying that the product '{}' is present in the cart", productName);
-        assertThat(this.driver.getLocator(shopPage.getHeaderElement().getCartPreviewElement()
-                .getProductFromCartPreview(productName)).isVisible()).isTrue();
+        assertThat(shopPage.getHeaderElement().getCartPreviewElement()
+                .getProductFromCartPreview(productName).getLocator().isVisible()).isTrue();
     }
 }

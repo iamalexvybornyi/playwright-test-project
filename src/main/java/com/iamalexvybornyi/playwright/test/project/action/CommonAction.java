@@ -26,16 +26,15 @@ public class CommonAction {
     @Step("Verify sign out link is displayed")
     public void verifySignOutLinkIsDisplayed() {
         log.info("Verifying the sign out link is displayed");
-        this.driver.getLocator(this.homePage.getHeaderElement().getSignOutLink()).waitFor();
-        boolean signOutLinkIsVisible = this.driver.getLocator(this.homePage.getHeaderElement().getSignOutLink())
-                .isVisible();
+        this.homePage.getHeaderElement().getSignOutLink().waitFor();
+        boolean signOutLinkIsVisible = this.homePage.getHeaderElement().getSignOutLink().isVisible();
         assertThat(signOutLinkIsVisible).isTrue();
     }
 
     @Step("Navigate to category from home page")
     public void navigateToCategoryFromHomePage(@NonNull Category category) {
         log.info("Navigating to the category {} from home page", category);
-        this.driver.getLocator(homePage.getHomeCategoryElement().getCategory(category)).click();
+        homePage.getHomeCategoryElementByName(category).getCategoryCardElement().click();
         log.info("Verifying that the current URL matches the expected");
         assertThat(driver.getPage().get().url())
                 .isEqualTo(urlConfiguration.getShop() + "/" + category.toString().toLowerCase());

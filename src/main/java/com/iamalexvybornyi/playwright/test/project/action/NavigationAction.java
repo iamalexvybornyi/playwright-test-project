@@ -25,7 +25,7 @@ public class NavigationAction {
     @Step("Go to shop page")
     public void goToShopPage() {
         log.info("Navigating to the shop page");
-        this.driver.getLocator(homePage.getHeaderElement().getShopLink()).click();
+        homePage.getHeaderElement().getShopLink().click();
         log.info("Verifying that the current URL matches the expected");
         assertThat(driver.getPage().get().url()).isEqualTo(urlConfiguration.getShop());
     }

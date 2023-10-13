@@ -6,6 +6,7 @@ import com.iamalexvybornyi.playwright.test.project.config.CustomTestWatcher;
 import com.iamalexvybornyi.playwright.test.project.config.UrlConfiguration;
 import com.iamalexvybornyi.playwright.test.project.config.browser.driver.Driver;
 import com.iamalexvybornyi.playwright.test.project.util.GlobalKeys;
+import com.iamalexvybornyi.playwright.test.project.util.PageInitializer;
 import com.iamalexvybornyi.playwright.test.project.util.TestDataGenerator;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -29,11 +30,18 @@ public class BaseTest {
     protected TestDataGenerator testDataGenerator;
     @Autowired
     protected NavigationAction navigationAction;
+    @Autowired
+    private PageInitializer pageInitializer;
+    private static volatile boolean arePagesInitialized = false;
 
     @BeforeEach
     protected void createContextAndPage(@NonNull TestInfo testInfo) {
         MDC.put(GlobalKeys.TEST_ID.getKey(), testInfo.getDisplayName());
         driver.start();
+        if (!arePagesInitialized) {
+            pageInitializer.initPages();
+            arePagesInitialized = true;
+        }
         navigationAction.navigateToUrl(urlConfiguration.getHome(), urlConfiguration.getHome());
     }
 
