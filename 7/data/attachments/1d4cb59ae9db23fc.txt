@@ -1,0 +1,15 @@
+2023-10-20 17:21:27 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-4] Initializing Playwright
+2023-10-20 17:21:30 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-4] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-10-20 17:21:33 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-4] Verifying that the current URL matches the expected
+2023-10-20 17:21:33 INFO c.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-4] Navigating to the category MENS from home page
+2023-10-20 17:21:33 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-4] Getting locator using selector '//h2[text()='mens']'
+2023-10-20 17:21:33 INFO c.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-4] Verifying that the current URL matches the expected
+2023-10-20 17:21:33 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-4] Adding product Camo Down Vest to cart
+2023-10-20 17:21:33 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-4] Getting locator using selector '//span[text()='Camo Down Vest']'
+2023-10-20 17:21:35 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-4] Getting locator using selector '//span[text()='Camo Down Vest']/parent::div/..//button[text()='Add to cart']'
+2023-10-20 17:21:35 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-4] Opening cart from header
+2023-10-20 17:21:35 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-4] Getting locator using selector '//*[@class='shopping-icon']/..'
+2023-10-20 17:21:35 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-4] Checking the cart preview is open
+2023-10-20 17:21:35 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-4] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]'
+2023-10-20 17:21:35 INFO c.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-4] Checking the product 'Camo Down Vest' is present in the cart preview
+2023-10-20 17:21:35 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-4] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]/..//span[text()='Camo Down Vest']'

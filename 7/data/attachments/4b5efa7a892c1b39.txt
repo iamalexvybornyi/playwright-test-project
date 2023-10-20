@@ -1,0 +1,16 @@
+2023-10-20 17:20:43 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Initializing Playwright
+2023-10-20 17:21:04 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-10-20 17:21:09 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Verifying that the current URL matches the expected
+2023-10-20 17:21:11 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app/auth'
+2023-10-20 17:21:13 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Verifying that the current URL matches the expected
+2023-10-20 17:21:14 INFO c.i.p.t.p.a.LoginAction [ForkJoinPool-1-worker-2] Signing up user with the following details: Account(displayName=liana.schneider, email=8kiz8cmsbg@mail.com, password=77r54fFvWn8l15cI$VmyM56pVLzj)
+2023-10-20 17:21:14 INFO c.i.p.t.p.a.LoginAction [ForkJoinPool-1-worker-2] Filling in the required form fields
+2023-10-20 17:21:14 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//input[@name='displayName']'
+2023-10-20 17:21:14 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//div[./span[contains(text(), 'Sign up with your email and password')]]//input[@name='email']'
+2023-10-20 17:21:14 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//div[./span[contains(text(), 'Sign up with your email and password')]]//input[@name='password']'
+2023-10-20 17:21:15 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//div[./span[contains(text(), 'Sign up with your email and password')]]//input[@name='confirmPassword']'
+2023-10-20 17:21:15 INFO c.i.p.t.p.a.LoginAction [ForkJoinPool-1-worker-2] Clicking the sign up button
+2023-10-20 17:21:15 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//button[@type='submit' and contains(text(), 'Sign Up')]'
+2023-10-20 17:21:15 INFO c.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-2] Verifying the sign out link is displayed
+2023-10-20 17:21:15 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//span[contains(text(), 'SIGN OUT')]'
+2023-10-20 17:21:18 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//span[contains(text(), 'SIGN OUT')]'

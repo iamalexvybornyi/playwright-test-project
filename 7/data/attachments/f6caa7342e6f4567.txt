@@ -1,0 +1,15 @@
+2023-10-20 17:21:15 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Initializing Playwright
+2023-10-20 17:21:20 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-6] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-10-20 17:21:25 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-6] Verifying that the current URL matches the expected
+2023-10-20 17:21:25 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-6] Navigating to the shop page
+2023-10-20 17:21:25 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//a[@href='/shop']'
+2023-10-20 17:21:26 INFO c.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-6] Verifying that the current URL matches the expected
+2023-10-20 17:21:26 INFO c.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-6] Adding product 'Black Jean Shearling' from category 'JACKETS' to cart
+2023-10-20 17:21:26 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//span[text()='Black Jean Shearling']'
+2023-10-20 17:21:27 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//a[contains(text(), 'JACKETS')]/parent::h2/..//span[text()='Black Jean Shearling']/parent::div/..//button[text()='Add to cart']'
+2023-10-20 17:21:27 INFO c.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-6] Opening cart from header
+2023-10-20 17:21:27 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//*[@class='shopping-icon']/..'
+2023-10-20 17:21:28 INFO c.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-6] Verifying that the checkout button is displayed
+2023-10-20 17:21:28 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]'
+2023-10-20 17:21:28 INFO c.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-6] Verifying that the product 'Black Jean Shearling' is present in the cart
+2023-10-20 17:21:28 DEBUG c.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]/..//span[text()='Black Jean Shearling']'
