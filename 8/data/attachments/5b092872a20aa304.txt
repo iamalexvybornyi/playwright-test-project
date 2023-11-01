@@ -1,0 +1,15 @@
+2023-11-01 16:26:01 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Initializing Playwright
+2023-11-01 16:26:06 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-11-01 16:26:09 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Verifying that the current URL matches the expected
+2023-11-01 16:26:09 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Navigating to the shop page
+2023-11-01 16:26:09 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//a[@href='/shop']'
+2023-11-01 16:26:10 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-2] Verifying that the current URL matches the expected
+2023-11-01 16:26:10 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-2] Adding product 'Camo Down Vest' from category 'MENS' to cart
+2023-11-01 16:26:10 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//span[text()='Camo Down Vest']'
+2023-11-01 16:26:11 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//a[contains(text(), 'MENS')]/parent::h2/..//span[text()='Camo Down Vest']/parent::div/..//button[text()='Add to cart']'
+2023-11-01 16:26:11 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-2] Opening cart from header
+2023-11-01 16:26:11 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//*[@class='shopping-icon']/..'
+2023-11-01 16:26:11 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-2] Verifying that the checkout button is displayed
+2023-11-01 16:26:11 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]'
+2023-11-01 16:26:11 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-2] Verifying that the product 'Camo Down Vest' is present in the cart
+2023-11-01 16:26:11 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-2] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]/..//span[text()='Camo Down Vest']'

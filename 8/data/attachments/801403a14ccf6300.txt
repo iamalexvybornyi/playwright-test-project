@@ -1,0 +1,15 @@
+2023-11-01 16:26:10 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Initializing Playwright
+2023-11-01 16:26:15 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-11-01 16:26:19 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2023-11-01 16:26:19 INFO o.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-5] Navigating to the category WOMENS from home page
+2023-11-01 16:26:19 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//h2[text()='womens']'
+2023-11-01 16:26:20 INFO o.i.p.t.p.a.CommonAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2023-11-01 16:26:20 INFO o.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-5] Adding product Blue Tanktop to cart
+2023-11-01 16:26:20 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//span[text()='Blue Tanktop']'
+2023-11-01 16:26:21 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//span[text()='Blue Tanktop']/parent::div/..//button[text()='Add to cart']'
+2023-11-01 16:26:21 INFO o.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-5] Opening cart from header
+2023-11-01 16:26:21 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//*[@class='shopping-icon']/..'
+2023-11-01 16:26:21 INFO o.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-5] Checking the cart preview is open
+2023-11-01 16:26:21 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]'
+2023-11-01 16:26:21 INFO o.i.p.t.p.a.CategoryAction [ForkJoinPool-1-worker-5] Checking the product 'Blue Tanktop' is present in the cart preview
+2023-11-01 16:26:21 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]/..//span[text()='Blue Tanktop']'

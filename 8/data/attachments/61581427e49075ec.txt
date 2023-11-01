@@ -1,0 +1,15 @@
+2023-11-01 16:25:57 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Initializing Playwright
+2023-11-01 16:26:02 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2023-11-01 16:26:08 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2023-11-01 16:26:08 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Navigating to the shop page
+2023-11-01 16:26:08 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//a[@href='/shop']'
+2023-11-01 16:26:08 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2023-11-01 16:26:08 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-5] Adding product 'Blue Tanktop' from category 'WOMENS' to cart
+2023-11-01 16:26:08 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//span[text()='Blue Tanktop']'
+2023-11-01 16:26:10 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//a[contains(text(), 'WOMENS')]/parent::h2/..//span[text()='Blue Tanktop']/parent::div/..//button[text()='Add to cart']'
+2023-11-01 16:26:10 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-5] Opening cart from header
+2023-11-01 16:26:10 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//*[@class='shopping-icon']/..'
+2023-11-01 16:26:10 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-5] Verifying that the checkout button is displayed
+2023-11-01 16:26:10 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]'
+2023-11-01 16:26:10 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-5] Verifying that the product 'Blue Tanktop' is present in the cart
+2023-11-01 16:26:10 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]/..//span[text()='Blue Tanktop']'

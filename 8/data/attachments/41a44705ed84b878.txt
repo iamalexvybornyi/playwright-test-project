@@ -1,0 +1,2 @@
+2023-11-01 16:25:13 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-3] Initializing Playwright
+2023-11-01 16:25:39 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-3] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
