@@ -1,0 +1,15 @@
+2025-03-10 11:33:55 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Initializing Playwright
+2025-03-10 11:34:17 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-6] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2025-03-10 11:34:20 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-6] Verifying that the current URL matches the expected
+2025-03-10 11:34:20 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-6] Navigating to the shop page
+2025-03-10 11:34:20 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//a[@href='/shop']'
+2025-03-10 11:34:21 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-6] Verifying that the current URL matches the expected
+2025-03-10 11:34:21 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-6] Adding product 'Adidas NMD' from category 'SNEAKERS' to cart
+2025-03-10 11:34:21 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//span[text()='Adidas NMD']'
+2025-03-10 11:34:22 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//a[contains(text(), 'SNEAKERS')]/parent::h2/..//span[text()='Adidas NMD']/parent::div/..//button[text()='Add to cart']'
+2025-03-10 11:34:22 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-6] Opening cart from header
+2025-03-10 11:34:22 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//*[@class='shopping-icon']/..'
+2025-03-10 11:34:23 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-6] Verifying that the checkout button is displayed
+2025-03-10 11:34:23 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]'
+2025-03-10 11:34:23 INFO o.i.p.t.p.a.ShoppingAction [ForkJoinPool-1-worker-6] Verifying that the product 'Adidas NMD' is present in the cart
+2025-03-10 11:34:23 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-6] Getting locator using selector '//button[contains(text(), 'GO TO CHECKOUT')]/..//span[text()='Adidas NMD']'

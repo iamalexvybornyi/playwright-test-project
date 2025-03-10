@@ -1,0 +1,5 @@
+2025-03-10 11:34:22 DEBUG o.i.p.t.p.c.b.d.Driver [ForkJoinPool-1-worker-5] Initializing Playwright
+2025-03-10 11:34:24 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app'
+2025-03-10 11:34:26 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
+2025-03-10 11:34:26 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Navigating to the URL 'https://heartfelt-speculoos-05a6fa.netlify.app/shop'
+2025-03-10 11:34:26 INFO o.i.p.t.p.a.NavigationAction [ForkJoinPool-1-worker-5] Verifying that the current URL matches the expected
